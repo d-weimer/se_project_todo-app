@@ -1,14 +1,23 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+The Simple ToDo App is a short purpose todo list that resets after each use.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+- Track todo tasks
+  - Todo name and due date (if required)
+- Check off completed todo tasks
+- Delete unwanted todo tasks
+- Add NEW Todo tasks to the list
+  - Requires valid input to submit the todo task (due date not required)
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+- VS Code
+- Dot by TripleTen
+- EditorConfig
+- Prettier
+- Live Server
 
 ## Deployment
 
