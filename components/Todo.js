@@ -14,13 +14,13 @@ class Todo {
     const todoDate = this._todoElement.querySelector(".todo__date");
     const todoDeleteBtn = this._todoElement.querySelector(".todo__delete-btn");
 
-    todoNameEl.textContent = this_data.name;
-    todoCheckboxEl.checked = this_data.completed;
+    todoNameEl.textContent = this._data.name;
+    todoCheckboxEl.checked = this._data.completed;
 
-    todoCheckboxEl.id = `todo-${this_data.id}`;
-    todoLabel.setAttribute("for", `todo-${this_data.id}`);
+    todoCheckboxEl.id = `todo-${this._data.id}`;
+    todoLabel.setAttribute("for", `todo-${this._data.id}`);
 
-    const dueDate = new Date(this_data.date);
+    const dueDate = new Date(this._data.date);
     if (!isNaN(dueDate)) {
       todoDate.textContent = `Due: ${dueDate.toLocaleString("en-US", {
         year: "numeric",
