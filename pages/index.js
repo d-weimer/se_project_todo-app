@@ -13,6 +13,18 @@ const todosList = document.querySelector(".todos__list");
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
 newTodoValidator.enableValidation();
 
+const section = new Section({
+  items: [], // pass initial todos
+  renderer: () => {
+    // Generate todo item
+    // Add it to the todo list
+    // (Refer to the forEach loop in this file)
+  },
+  containerSelector: ".todos__list",
+});
+
+renderItems();
+
 const openModal = (modal) => {
   modal.classList.add("popup_visible");
 };
@@ -28,10 +40,10 @@ const generateTodo = (data) => {
   return todoElement;
 };
 
-const renderTodo = (item) => {
-  const todo = generateTodo(item);
-  todosList.append(todo);
-};
+// const renderTodo = (item) => {
+//   const todo = generateTodo(item);
+//   todosList.append(todo);  // Use addItem method instead
+// };
 
 addTodoButton.addEventListener("click", () => {
   openModal(addTodoPopup);
