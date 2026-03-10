@@ -40,11 +40,6 @@ const closeModal = (modal) => {
   modal.classList.remove("popup_visible");
 };
 
-// const renderTodo = (item) => {
-//   const todo = generateTodo(item);
-//   todosList.append(todo);  // Use addItem method instead
-// };
-
 addTodoButton.addEventListener("click", () => {
   openModal(addTodoPopup);
 });
@@ -71,5 +66,3 @@ addTodoForm.addEventListener("submit", (evt) => {
   closeModal(addTodoPopup);
   newTodoValidator.resetValidation();
 });
-
-//initialTodos.forEach(renderTodo);
