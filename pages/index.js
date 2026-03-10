@@ -15,8 +15,8 @@ const todosList = document.querySelector(".todos__list");
 const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
   handleFormSubmit: (inputValues) => {
-    const name = inputValues.name.value;
-    const dateInput = inputValues.date.value;
+    const name = inputValues.name;
+    const dateInput = inputValues.date;
 
     // Create a date object and adjust for timezone
     const date = new Date(dateInput);

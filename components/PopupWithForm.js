@@ -15,6 +15,7 @@ class PopupWithForm extends Popup {
       // the key is input.name
       // the value is input.value
       // need to use brackets notation, not dot notation
+      inputValues[input.name] = input.value;
     });
 
     return inputValues;
