@@ -10,8 +10,6 @@ import TodoCounter from "../components/TodoCounter.js";
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopupElement = document.querySelector("#add-todo-popup");
 const addTodoForm = addTodoPopupElement.querySelector(".popup__form");
-const addTodoCloseBtn = addTodoPopupElement.querySelector(".popup__close");
-const todosList = document.querySelector(".todos__list");
 
 const todoCounter = new TodoCounter(initialTodos, ".counter__text");
 
@@ -21,7 +19,6 @@ const addTodoPopup = new PopupWithForm({
     const name = inputValues.name;
     const dateInput = inputValues.date;
 
-    // Create a date object and adjust for timezone
     const date = new Date(dateInput);
     date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 
@@ -66,7 +63,6 @@ const section = new Section({
   items: initialTodos,
   renderer: (item) => {
     const todo = generateTodo(item);
-    //section.addItem(todo);
     return todo;
   },
   containerSelector: ".todos__list",
